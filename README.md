@@ -1,1 +1,1 @@
-# fuelsa-wordpress-plugin
+# Fuel SA Wordpress Plugin
