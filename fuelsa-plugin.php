@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Fuel SA Plugin
- * Plugin URI: https://fuelsa.co.za
+ * Plugin URI: https://github.com/naileddigital/fuelsa-wordpress-plugin
  * Description: Fuel SA utilities
  * Version: 0.1
  * Text Domain: fuelsa-plugin
