@@ -3,7 +3,7 @@
  * Plugin Name: Fuel SA Plugin
  * Plugin URI: https://github.com/naileddigital/fuelsa-wordpress-plugin
  * Description: Fuel SA utilities
- * Version: 0.1
+ * Version: 0.3
  * Text Domain: fuelsa-plugin
  * Author: Nailed Digital
  * Author URI: https://www.naileddigital.com
@@ -134,7 +134,7 @@ function format_price($number) {
 	 $content .= '<div class="fuelsa-cfp-regions"><div>Reef</div><div>Coast</div></div>';
 	 $content .= '<div class="fuelsa-cfp-prices"><div><span class="fuelsa-cfp-title">50 PPM (0.005%)</span><span>' . $dieselreef50ppm . '</span><span class="fuelsa-cfp-title">500 PPM (0.05%)</span><span>' . $dieselreef500ppm . '</span></div><div><span class="fuelsa-cfp-title">50 PPM (0.005%)</span><span>' . $dieselcoast50ppm . '</span><span class="fuelsa-cfp-title">500 PPM (0.05%)</span><span>' . $dieselcoast500ppm . '</span></div><span class="fuelsa-cfp-diesel-terms">* Wholesale Diesel price quoted. Prices may vary between fuel retailers.</span></div>';
 	 $content .= '</div>';
-	 $content .= '<div>Powered by <a href="https://www.fuelsa.co.za" target="_blank">Fuel SA</a>';
+	 $content .= '<div>Powered by <a href="https://www.fuelsa.co.za" target="_blank">Fuel SA</a></div>';
 	 $content .= '</div>';
 	 
     return $content;
@@ -166,20 +166,21 @@ function fsa_fuel_prices_chart($atts) {
 	 
 	 if ($settings['fsa_theme'] == 1) {
 		$content .= '<style>';
-		$content .= '.fuelsa-cfp-container { width: 100%; }';
-		$content .= '.fuelsa-cfp-container > div { width: 100%; }';
+		$content .= '.fuelsa-fpc-container { width: 100%; }';
+		$content .= '.fuelsa-fpc-container > div { width: 100%; }';
 		$content .= '.fsa-chart { width: 100%; min-height: 200px; }';
 		$content .= '</style>';
 	 }
 
-	 $content .= '<div class="fuelsa-cfp-container">';
-	 $content .= '<div class="fuelsa-cfp-petrol-container">';
+	 $content .= '<div class="fuelsa-fpc-container">';
+	 $content .= '<div class="fuelsa-fpc-petrol-container">';
 	 $content .= '<h2>Petrol</h2>';
 	 $content .= '<canvas id="fsa-petrol-chart" class="fsa-chart"></canvas>';
-	 $content .= '</div><div class="fuelsa-cfp-diesel-container">';
+	 $content .= '</div><div class="fuelsa-fpc-diesel-container">';
 	 $content .= '<h2>Diesel</h2>';
 	 $content .= '<canvas id="fsa-diesel-chart" class="fsa-chart"></canvas>';
-	 $content .= '</div>';
+	 $content .= '</div><div>Powered by <a href="https://www.fuelsa.co.za" target="_blank">Fuel SA</a>';
+	 $content .= '</div></div>';
 
 
 	 return $content;
